@@ -1,0 +1,40 @@
+diff --git a/backend/src/InvoiceApp.Domain/InvoiceApprovalService.cs b/backend/src/InvoiceApp.Domain/InvoiceApprovalService.cs
+--- a/backend/src/InvoiceApp.Domain/InvoiceApprovalService.cs
++++ b/backend/src/InvoiceApp.Domain/InvoiceApprovalService.cs
+@@ -18,11 +18,5 @@ public class InvoiceApprovalService
+     public IReadOnlyList<Invoice> GetPendingInvoices(IEnumerable<Invoice> invoices)
+     {
+-        var pendingInvoices = new List<Invoice>();
+-        foreach (var invoice in invoices)
+-        {
+-            if (invoice.Status == InvoiceStatus.PendingApproval)
+-            {
+-                pendingInvoices.Add(invoice);
+-            }
+-        }
+-        return pendingInvoices;
++        return invoices
++            .Where(invoice => invoice.Status == InvoiceStatus.PendingApproval)
++            .ToList();
+     }
+ }
+diff --git a/backend/tests/InvoiceApp.Tests/InvoiceApprovalServiceTests.cs b/backend/tests/InvoiceApp.Tests/InvoiceApprovalServiceTests.cs
+--- a/backend/tests/InvoiceApp.Tests/InvoiceApprovalServiceTests.cs
++++ b/backend/tests/InvoiceApp.Tests/InvoiceApprovalServiceTests.cs
+@@ -24,3 +24,16 @@ public class InvoiceApprovalServiceTests
+         Assert.Equal(expected, service.GetPendingInvoices(invoices));
+     }
++
++    [Fact]
++    public void GetPendingInvoices_ReturnsOnlyPendingInvoicesInOriginalOrder()
++    {
++        var firstPending = new Invoice { Id = "INV-1", Status = InvoiceStatus.PendingApproval };
++        var draft = new Invoice { Id = "INV-2", Status = InvoiceStatus.Draft };
++        var secondPending = new Invoice { Id = "INV-3", Status = InvoiceStatus.PendingApproval };
++        var service = new InvoiceApprovalService();
++
++        var result = service.GetPendingInvoices(new[] { firstPending, draft, secondPending });
++
++        Assert.Equal(new[] { firstPending, secondPending }, result);
++    }
+ }

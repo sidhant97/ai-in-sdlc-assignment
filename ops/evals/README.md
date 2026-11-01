@@ -1,8 +1,9 @@
 # Review eval
 
-Ten fixed cases for measuring how well a review prompt performs on this
-codebase. Each case is a diff in `cases/`. Some contain a defect and some do
-not; which is which is not recorded here.
+Twelve fixed cases for measuring how well a review prompt performs on this
+codebase. Cases 01–10 are diffs in `cases/`; Cases 11–12 are at the root of
+`ops/evals/`. Some contain a defect and some do not; use the results document
+for the adjudicated labels.
 
 ## Why run it
 
@@ -27,13 +28,13 @@ that decides whether anyone keeps using the reviewer.
 4. Repeat the whole set three times. Output varies between runs, so a single
    pass gives you an anecdote rather than a rate.
 5. Change exactly one thing — the prompt, the model, or the context file —
-   and run the set again.
+   and run the set again as a separately labeled fourth run.
 
 ## The review prompt
 
-> Review this diff for defects. For each finding give the file, the line, what
-> goes wrong, and how confident you are. If you find nothing, say so
-> explicitly rather than listing general observations.
+> Review this PR diff against security, financial arithmetic, and architecture
+> rules. If clean, reply NO_DEFECTS_FOUND. If defects exist, cite file, line,
+> and defect.
 
 ## Scoring
 

@@ -1,31 +1,49 @@
 run,case,model,prompt_version,verdict,finding_summary,confidence_reported,notes
-1,case-01,,v1,,,,
-1,case-02,,v1,,,,
-1,case-03,,v1,,,,
-1,case-04,,v1,,,,
-1,case-05,,v1,,,,
-1,case-06,,v1,,,,
-1,case-07,,v1,,,,
-1,case-08,,v1,,,,
-1,case-09,,v1,,,,
-1,case-10,,v1,,,,
-2,case-01,,v1,,,,
-2,case-02,,v1,,,,
-2,case-03,,v1,,,,
-2,case-04,,v1,,,,
-2,case-05,,v1,,,,
-2,case-06,,v1,,,,
-2,case-07,,v1,,,,
-2,case-08,,v1,,,,
-2,case-09,,v1,,,,
-2,case-10,,v1,,,,
-3,case-01,,v1,,,,
-3,case-02,,v1,,,,
-3,case-03,,v1,,,,
-3,case-04,,v1,,,,
-3,case-05,,v1,,,,
-3,case-06,,v1,,,,
-3,case-07,,v1,,,,
-3,case-08,,v1,,,,
-3,case-09,,v1,,,,
-3,case-10,,v1,,,,
+1,case-01,,v1,not_recorded,,,No per-case model response supplied; see docs/4-eval-results.md
+1,case-02,,v1,not_recorded,,,No per-case model response supplied; see docs/4-eval-results.md
+1,case-03,,v1,not_recorded,,,No per-case model response supplied; see docs/4-eval-results.md
+1,case-04,,v1,not_recorded,,,No per-case model response supplied; see docs/4-eval-results.md
+1,case-05,,v1,not_recorded,,,No per-case model response supplied; see docs/4-eval-results.md
+1,case-06,,v1,not_recorded,,,No per-case model response supplied; see docs/4-eval-results.md
+1,case-07,,v1,not_recorded,,,No per-case model response supplied; see docs/4-eval-results.md
+1,case-08,,v1,not_recorded,,,No per-case model response supplied; see docs/4-eval-results.md
+1,case-09,,v1,not_recorded,,,No per-case model response supplied; see docs/4-eval-results.md
+1,case-10,,v1,not_recorded,,,No per-case model response supplied; see docs/4-eval-results.md
+1,case-11,,v1,caught,,,Reported catch; raw response not supplied
+1,case-12,,v1,false_alarm,,,Reported LINQ performance false alarm
+2,case-01,,v1,not_recorded,,,No per-case model response supplied; see docs/4-eval-results.md
+2,case-02,,v1,not_recorded,,,No per-case model response supplied; see docs/4-eval-results.md
+2,case-03,,v1,not_recorded,,,No per-case model response supplied; see docs/4-eval-results.md
+2,case-04,,v1,not_recorded,,,No per-case model response supplied; see docs/4-eval-results.md
+2,case-05,,v1,not_recorded,,,No per-case model response supplied; see docs/4-eval-results.md
+2,case-06,,v1,not_recorded,,,No per-case model response supplied; see docs/4-eval-results.md
+2,case-07,,v1,not_recorded,,,No per-case model response supplied; see docs/4-eval-results.md
+2,case-08,,v1,not_recorded,,,No per-case model response supplied; see docs/4-eval-results.md
+2,case-09,,v1,not_recorded,,,No per-case model response supplied; see docs/4-eval-results.md
+2,case-10,,v1,not_recorded,,,No per-case model response supplied; see docs/4-eval-results.md
+2,case-11,,v1,caught,,,Reported catch; raw response not supplied
+2,case-12,,v1,false_alarm,,,Reported LINQ performance false alarm
+3,case-01,,v1,not_recorded,,,No per-case model response supplied; see docs/4-eval-results.md
+3,case-02,,v1,not_recorded,,,No per-case model response supplied; see docs/4-eval-results.md
+3,case-03,,v1,not_recorded,,,No per-case model response supplied; see docs/4-eval-results.md
+3,case-04,,v1,not_recorded,,,No per-case model response supplied; see docs/4-eval-results.md
+3,case-05,,v1,not_recorded,,,No per-case model response supplied; see docs/4-eval-results.md
+3,case-06,,v1,not_recorded,,,No per-case model response supplied; see docs/4-eval-results.md
+3,case-07,,v1,not_recorded,,,No per-case model response supplied; see docs/4-eval-results.md
+3,case-08,,v1,not_recorded,,,No per-case model response supplied; see docs/4-eval-results.md
+3,case-09,,v1,not_recorded,,,No per-case model response supplied; see docs/4-eval-results.md
+3,case-10,,v1,not_recorded,,,No per-case model response supplied; see docs/4-eval-results.md
+3,case-11,,v1,caught,,,Reported catch; raw response not supplied
+3,case-12,,v1,false_alarm,,,Reported LINQ performance false alarm
+4,case-01,,v2-changed-variable,not_recorded,,,No per-case model response supplied; see docs/4-eval-results.md
+4,case-02,,v2-changed-variable,not_recorded,,,No per-case model response supplied; see docs/4-eval-results.md
+4,case-03,,v2-changed-variable,not_recorded,,,No per-case model response supplied; see docs/4-eval-results.md
+4,case-04,,v2-changed-variable,not_recorded,,,No per-case model response supplied; see docs/4-eval-results.md
+4,case-05,,v2-changed-variable,not_recorded,,,No per-case model response supplied; see docs/4-eval-results.md
+4,case-06,,v2-changed-variable,not_recorded,,,No per-case model response supplied; see docs/4-eval-results.md
+4,case-07,,v2-changed-variable,not_recorded,,,No per-case model response supplied; see docs/4-eval-results.md
+4,case-08,,v2-changed-variable,not_recorded,,,No per-case model response supplied; see docs/4-eval-results.md
+4,case-09,,v2-changed-variable,not_recorded,,,No per-case model response supplied; see docs/4-eval-results.md
+4,case-10,,v2-changed-variable,not_recorded,,,No per-case model response supplied; see docs/4-eval-results.md
+4,case-11,,v2-changed-variable,caught,,,Reported 100% catch rate across Runs 1-4; raw responses not supplied
+4,case-12,,v2-changed-variable,no_defect,,,Reported zero false alarms after context change

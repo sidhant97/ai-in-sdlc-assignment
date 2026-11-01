@@ -1,0 +1,14 @@
+diff --git a/backend/src/InvoiceApp.Domain/TaxCalculator.cs b/backend/src/InvoiceApp.Domain/TaxCalculator.cs
+--- a/backend/src/InvoiceApp.Domain/TaxCalculator.cs
++++ b/backend/src/InvoiceApp.Domain/TaxCalculator.cs
+@@ -8,5 +8,8 @@ public static class TaxCalculator
+ {
+     public static decimal CalculateTax(decimal amount, decimal taxRate)
+     {
+-        return Math.Round(amount * taxRate, 2, MidpointRounding.AwayFromZero);
++        var amountAsFloat = (float)amount;
++        var taxRateAsFloat = (float)taxRate;
++        var tax = amountAsFloat * taxRateAsFloat;
++        return Math.Round((decimal)tax, 2, MidpointRounding.AwayFromZero);
+     }
+ }
